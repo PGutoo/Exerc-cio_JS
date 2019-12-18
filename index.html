@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel=”stylesheet” href="./styles.css"/>
+    <style>
+      body{
+    display: flex;
+    flex-direction: column;
+    width: 10em;      
+  }
+    input{
+      width: 30em;
+    }
+    #demo{
+      width: 100em;
+    }
+    </style>
+  </head>
+  <body>
+    <section>
+        <span>Nome do autor:</span>
+        <input id="nomeAt" type="text"/>
+
+        <span>Título:</span>
+        <input id="title"  type='text'/>
+
+        <span>Número da edição</span>
+        <input id="nEd"    type="number"/>
+
+        <span>Local da publicação</span>
+        <input id="localdpub" type="text"/>
+
+        <span>Nome da editora</span>
+        <input id="nomeEd"    type="text"/>
+
+        <span>Ano da publicação</span>
+        <input id="yearPub"   type="number"/>
+
+        <button type="submit" onclick="oi()" value="Enviar">clica aqui ai cê vai ver um coiso acontecer</button>
+        <button type="reset" onclick="reset()" value="Reset">Clica aqui pra cê vê outro coiso</button>
+        <button type="button" onclick="especial()">Botão muito especial</button>
+        <p id="demo"></p>
+        <img id="especial" src=""/>
+      </section>
+    
+    <script>
+      function oi(){
+        var a = document.getElementById("nomeAt");
+        var b = document.getElementById("title");
+        var c = document.getElementById("nEd");
+        var d = document.getElementById("localdpub");
+        var e = document.getElementById("nomeEd");
+        var f = document.getElementById("yearPub");
+        
+        var result = [].concat(a.value, b.value, c.value, d.value, e.value, f.value);
+        document.getElementById("demo").innerHTML = result;
+      }
+      function reset(){
+        document.getElementById("especial").src = "índice.jpeg";
+      }
+    </script>
+    </body>
+</html>
